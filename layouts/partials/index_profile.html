@@ -24,18 +24,18 @@
                 {{- end }}
             {{- end }}
             <img draggable="false" src="{{ $img.Permalink }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
-                height="{{ .imageHeight | default 150 }}" width="{{ .imageWidth | default 150 }}" />
+                height="{{ .imageHeight | default 150 }}" width="{{ .imageWidth | default 150 }}" class="animate"/>
         {{- else }}
         <img draggable="false" src="{{ .imageUrl | absURL }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
-            height="{{ .imageHeight | default 150 }}" width="{{ .imageWidth | default 150 }}" />
+            height="{{ .imageHeight | default 150 }}" width="{{ .imageWidth | default 150 }}" class="animate"/>
         {{- end }}
         {{- end }}
-        <h1>{{ .title | default site.Title | markdownify }}</h1>
-        <span>{{ .subtitle | markdownify }}</span>
+        <h1 class="animate">{{ .title | default site.Title | markdownify }}</h1>
+        <span class="animate">{{ .subtitle | markdownify }}</span>
         {{- partial "social_icons.html" -}}
 
         {{- with .buttons }}
-        <div class="buttons">
+        <div class="buttons animate">
             {{- range . }}
             <a class="button" href="{{ trim .url " " }}" rel="noopener" title="{{ .name }}">
                 <span class="button-inner">

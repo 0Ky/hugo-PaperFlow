@@ -1,0 +1,19 @@
+.animate {
+  opacity: 0;
+  transform: translateY(-2.5rem);
+}
+
+@keyframes revealOnLoad {
+  from {
+    opacity: 0;
+    transform: translateY(-2.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate.show {
+  animation: revealOnLoad 0.18s cubic-bezier(0, 0.55, 0.45, 1) forwards;
+}

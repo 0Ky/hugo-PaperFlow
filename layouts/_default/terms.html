@@ -1,7 +1,7 @@
 {{- define "main" }}
 
 {{- if .Title }}
-<header class="page-header">
+<header class="page-header {{ if .Site.Params.animateReveal }}animate{{ end }}">
     <h1>{{ .Title }}</h1>
     {{- if .Description }}
     <div class="post-description">
@@ -11,7 +11,7 @@
 </header>
 {{- end }}
 
-<ul class="terms-tags">
+<ul class="terms-tags {{ if .Site.Params.animateReveal }}animate{{ end }}">
     {{- $type := .Type }}
     {{- range $key, $value := .Data.Terms.Alphabetical }}
     {{- $name := .Name }}

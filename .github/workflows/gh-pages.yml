@@ -8,14 +8,13 @@ on:
       - "README.md"
     branches:
       - master
-      - exampleSite
   workflow_dispatch:
     # manual run
     inputs:
       hugoVersion:
         description: "Hugo Version"
         required: false
-        default: "0.146.0"
+        default: "0.147.9"
 
 # Allow one concurrent deployment
 concurrency:
@@ -38,7 +37,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: ${{ github.event.inputs.hugoVersion || '0.146.0' }}
+      HUGO_VERSION: ${{ github.event.inputs.hugoVersion || '0.147.9' }}
     steps:
       - name: Install Hugo CLI
         run: |
@@ -47,7 +46,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: exampleSite
+          ref: master
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
@@ -58,12 +57,13 @@ jobs:
       - name: Build with Hugo
         run: |
           hugo \
+            --source exampleSite \
             --buildDrafts --gc \
             --baseURL ${{ steps.pages.outputs.base_url }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./public
+          path: ./exampleSite/public
   # Deployment job
   deploy:
     environment:

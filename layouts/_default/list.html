@@ -5,7 +5,7 @@
 {{- else }} {{/* if not profileMode */}}
 
 {{- if not .IsHome | and .Title }}
-<header class="page-header">
+<header class="page-header {{ if .Site.Params.animateReveal }}animate{{ end }}">
   {{- partial "breadcrumbs.html" . }}
   <h1>
     {{ .Title }}
@@ -31,7 +31,7 @@
 {{- end }}
 
 {{- if .Content }}
-<div class="post-content">
+<div class="post-content {{ if .Site.Params.animateReveal }}animate{{ end }}">
   {{- if not (.Param "disableAnchoredHeadings") }}
   {{- partial "anchored_headings.html" .Content -}}
   {{- else }}{{ .Content }}{{ end }}
@@ -52,15 +52,16 @@
 {{- end }}
 
 {{- $term := .Data.Term }}
+{{- $ctx := . }}
 {{- range $index, $page := $paginator.Pages }}
 
-{{- $class := "post-entry" }}
+{{- $class := printf "post-entry %s" (cond site.Params.animateReveal "animate" "") }}
 
 {{- $user_preferred := or site.Params.disableSpecial1stPost site.Params.homeInfoParams }}
 {{- if (and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) (not $user_preferred)) }}
 {{- $class = "first-entry" }}
 {{- else if $term }}
-{{- $class = "post-entry tag-entry" }}
+{{- $class = "post-entry tag-entry animate" }}
 {{- end }}
 
 <article class="{{ $class }}">
@@ -94,7 +95,7 @@
 {{- end }}
 
 {{- if gt $paginator.TotalPages 1 }}
-<footer class="page-footer">
+<footer class="page-footer {{ if $ctx.Site.Params.animateReveal }}animate{{ end }}">
   <nav class="pagination">
     {{- if $paginator.HasPrev }}
     <a class="prev" href="{{ $paginator.Prev.URL | absURL }}">

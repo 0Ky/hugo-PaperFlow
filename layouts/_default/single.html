@@ -1,7 +1,7 @@
 {{- define "main" }}
 
 <article class="post-single">
-  <header class="post-header">
+  <header class="post-header {{ if .Site.Params.animateReveal }}animate{{ end }}">
     {{ partial "breadcrumbs.html" . }}
     <h1 class="post-title entry-hint-parent">
       {{ .Title }}
@@ -35,14 +35,14 @@
   {{- end }}
 
   {{- if .Content }}
-  <div class="post-content">
+  <div class="post-content {{ if .Site.Params.animateReveal }}animate{{ end }}">
     {{- if not (.Param "disableAnchoredHeadings") }}
     {{- partial "anchored_headings.html" .Content -}}
     {{- else }}{{ .Content }}{{ end }}
   </div>
   {{- end }}
 
-  <footer class="post-footer">
+  <footer class="post-footer {{ if .Site.Params.animateReveal }}animate{{ end }}">
     {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
     <ul class="post-tags">
       {{- range ($.GetTerms $tags) }}

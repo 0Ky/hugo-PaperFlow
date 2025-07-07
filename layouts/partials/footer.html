@@ -17,7 +17,7 @@
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+        <a href="https://github.com/0Ky/hugo-PaperFlow/" rel="noopener" target="_blank">PaperMod</a>
     </span>
 </footer>
 {{- end }}
@@ -104,8 +104,12 @@
 
         function copyingDone() {
             copybutton.innerHTML = '{{- i18n "code_copied" | default "copied!" }}';
+            copybutton.style.background = 'rgb(45 143 34)';
+            copybutton.style.color = 'var(--lightgray)';
             setTimeout(() => {
                 copybutton.innerHTML = '{{- i18n "code_copy" | default "copy" }}';
+            copybutton.style.background = '';
+            copybutton.style.color = '';
             }, 2000);
         }
 

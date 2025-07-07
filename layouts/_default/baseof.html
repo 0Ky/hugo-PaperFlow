@@ -22,6 +22,9 @@
         {{- block "main" . }}{{ end }}
     </main>
     {{ partialCached "footer.html" . .Layout .Kind (.Param "hideFooter") (.Param "ShowCodeCopyButtons") -}}
+    {{- if .Site.Params.animateReveal }}
+    {{- partial "animation-reveal.html" . -}}
+    {{- end }}
 </body>
 
 </html>
