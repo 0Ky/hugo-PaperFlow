@@ -107,8 +107,9 @@ You can contribute by:
 ### Getting Started
 1. [Fork](https://github.com/0Ky/hugo-PaperFlow/fork) the repository.
 2. Create a new branch for your changes.
-3. Make your changes locally (you can test using the `exampleSite` with `hugo server --source exampleSite`).
-4. Submit a pull request with a clear description of what you've changed and why.
+3. Make your changes or additions in the codebase.
+4. Test thoroughly using the `exampleSite` by running `hugo server --source exampleSite`.
+5. Submit a pull request with a clear description of what you've changed and why.
 
 <!-- Read Wiki For More Details => **[PaperMod - Installation](https://github.com/0Ky/hugo-PaperFlow/wiki/Installation)** -->
 
