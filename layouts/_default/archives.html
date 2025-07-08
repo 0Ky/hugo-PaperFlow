@@ -54,7 +54,8 @@
     <div class="archive-posts">
       {{- range .Pages }}
       {{- if eq .Kind "page" }}
-      <div class="archive-entry">
+      <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}">
+        <div class="archive-entry">
           <h3 class="archive-entry-title entry-hint-parent">
             {{- .Title | markdownify }}
             {{- if .Draft }}
@@ -69,8 +70,8 @@
           <div class="archive-meta">
             {{- partial "post_meta.html" . -}}
           </div>
-        <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
-      </div>
+        </div>
+      </a>
       {{- end }}
       {{- end }}
     </div>

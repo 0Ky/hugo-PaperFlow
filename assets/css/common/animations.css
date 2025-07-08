@@ -15,5 +15,23 @@
 }
 
 .animate.show {
-  animation: revealOnLoad 0.18s cubic-bezier(0, 0.55, 0.45, 1) forwards;
+  animation: revealOnLoad 0.4s cubic-bezier(0, 0.55, 0.45, 1) forwards;
+}
+
+.pagination .next,
+.pagination .prev {
+    transition: transform 0.1s;
+}
+
+.pagination .next:active,
+.pagination .prev:active {
+    transform: scale(.86);
+}
+
+a.entry-link {
+    display: block;
+}
+
+.social-icons {
+    display: inline;
 }
