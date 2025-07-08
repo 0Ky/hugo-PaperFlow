@@ -104,7 +104,7 @@ You can contribute by:
 #### 🧰 Creating blog posts, tutorials or integration guides
 #### 🧹 Refactoring code or improving performance
 
-## Getting Started
+### Getting Started
 1. [Fork](https://github.com/0Ky/hugo-PaperFlow/fork) the repository.
 2. Create a new branch for your changes.
 3. Make your changes locally (you can test using the `exampleSite` with `hugo server --source exampleSite`).
