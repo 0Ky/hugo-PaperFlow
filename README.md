@@ -14,6 +14,14 @@
   <kbd><img src="https://user-images.githubusercontent.com/21258296/114303440-bfc0ae80-9aeb-11eb-8cfa-48a4bb385a6d.png" alt="Mockup image" title="Mockup"/></kbd>
 </p>
 
+<h1 align=center>🥇 Lighthouse Score</h1>
+
+<p align="center">
+  <a href="https://pagespeed.web.dev/report?url=https://0ky.github.io/hugo-PaperFlow/&form_factor=desktop">
+    <img width="700" alt="Lighthouse Score" src="PageSpeed-Insights.svg">
+  </a>
+</p>
+
 ## ✨ Features/Mods
 
 -   Uses Hugo's asset generator with pipelining, fingerprinting, bundling and minification by default.
@@ -82,6 +90,26 @@
    hugo server -D
    ```
 
+## 👷 Contributing
+
+Contributions are welcome and encouraged! This Hugo theme is a community-driven project and all kinds of improvements are appreciated, whether you're working on new features, bug fixes, styling updates, accessibility improvements, optimization, documentation or contents in the `exampleSite`.
+
+You can contribute by:
+
+#### ✨ Adding new features or layout components
+#### 🐞 Fixing bugs or compatibility issues
+#### 🖋 Updating or expanding the documentation
+#### 🧪 Improving or restructuring the `exampleSite` (demo) content
+#### 🎨 Enhancing design, responsiveness or accessibility
+#### 🧰 Creating blog posts, tutorials or integration guides
+#### 🧹 Refactoring code or improving performance
+
+## Getting Started
+1. [Fork](https://github.com/0Ky/hugo-PaperFlow/fork) the repository.
+2. Create a new branch for your changes.
+3. Make your changes locally (you can test using the `exampleSite` with `hugo server --source exampleSite`).
+4. Submit a pull request with a clear description of what you've changed and why.
+
 <!-- Read Wiki For More Details => **[PaperMod - Installation](https://github.com/0Ky/hugo-PaperFlow/wiki/Installation)** -->
 
 <!-- ---
@@ -99,8 +127,6 @@ Read Wiki For More Details => **[PaperMod-Icons](https://github.com/0Ky/hugo-Pap
 ## 📃 Release Changelog
 
 Release ChangeLog has info about stuff added: **[Releases](https://github.com/0Ky/hugo-PaperFlow/releases)**
-
-## [Pagespeed Insights (100% ?)](https://pagespeed.web.dev/report?url=https://0ky.github.io/hugo-PaperFlow/) 👀
 
 ## 🫶 Support
 
