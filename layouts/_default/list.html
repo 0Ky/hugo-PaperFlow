@@ -64,8 +64,8 @@
 {{- $class = "post-entry tag-entry animate" }}
 {{- end }}
 
-<a class="entry-link {{ if .Site.Params.animateReveal }}animate{{ end }}" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}">
-  <article class="{{ $class }}">
+<article class="{{ $class }} {{ if .Site.Params.animateReveal }}animate{{ end }}">
+  <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
     {{- $isHidden := (.Param "cover.hiddenInList") | default (.Param "cover.hidden") | default false }}
     {{- partial "cover.html" (dict "cxt" . "IsSingle" false "isHidden" $isHidden) }}
     <header class="entry-header">
@@ -91,8 +91,7 @@
       {{- partial "post_meta.html" . -}}
     </footer>
     {{- end }}
-  </article>
-</a>
+</article>
 
 {{- end }}
 
